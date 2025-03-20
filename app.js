@@ -3,6 +3,7 @@ const strArr = [
   "honda",
   "toyota",
   "subaru",
+  "chevrolet",
   "mercedes-benz",
   "nissan",
   "mazda",
@@ -34,15 +35,29 @@ const strArr = [
 
 ////// Longest String -------
 
-function getLongestString(arr) {
-  let longestStr = "";
-  for (let i = 0; i < arr.length; i++) {
-    let chars = arr[i];
-    if (chars.length > longestStr.length) {
-      longestStr = chars;
+// function getLongestString(arr) {
+//   let longestStr = "";
+//   for (let i = 0; i < arr.length; i++) {
+//     let chars = arr[i];
+//     if (chars.length > longestStr.length) {
+//       longestStr = chars;
+//     }
+//   }
+//   return longestStr;
+// }
+
+// console.log(getLongestString(strArr));
+
+////// return the string that longer than given number -------
+
+function getArrOfLongerString(arr, num) {
+  let longerStr = [];
+  for (let chars of arr) {
+    if (chars.length > num) {
+      longerStr.push(chars);
     }
   }
-  return longestStr;
+  return longerStr;
 }
 
-console.log(getLongestString(strArr));
+console.log(getArrOfLongerString(strArr, 6));
