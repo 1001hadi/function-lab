@@ -50,14 +50,35 @@ const strArr = [
 
 ////// return the string that longer than given number -------
 
-function getArrOfLongerString(arr, num) {
-  let longerStr = [];
-  for (let chars of arr) {
-    if (chars.length > num) {
-      longerStr.push(chars);
-    }
-  }
-  return longerStr;
-}
+// function getArrOfLongerString(arr, num) {
+//   let longerStr = [];
+//   for (let chars of arr) {
+//     if (chars.length > num) {
+//       longerStr.push(chars);
+//     }
+//   }
+//   return longerStr;
+// }
 
-console.log(getArrOfLongerString(strArr, 6));
+// console.log(getArrOfLongerString(strArr, 6));
+
+////////-------------------------------///////////
+//////// Part 2: Thinking Methodically ///////////
+
+const arrayOfObj = [
+  { id: "42", name: "Bruce", occupation: "Knight", age: "41" },
+  { id: "48", name: "Barry", occupation: "Runner", age: "25" },
+  { id: "57", name: "Bob", occupation: "Fry Cook", age: "19" },
+  { id: "63", name: "Blaine", occupation: "Quiz Master", age: "58" },
+  { id: "7", name: "Bilbo", occupation: "None", age: "111" },
+];
+
+// // sorting by ages.
+
+const sortByAges = [...arrayOfObj].sort(
+  (a, b) => Number(a.age) - Number(b.age)
+);
+console.log("Sorted by age:", sortByAges);
+
+
+
