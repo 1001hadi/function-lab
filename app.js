@@ -85,5 +85,13 @@ console.log("Sorted by age:", sortByAges);
 const underFifty = arrayOfObj.filter((entries) => Number(entries.age) <= 50);
 console.log(underFifty);
 
+// // changing occupation to job & age +1
 
+const changedData = arrayOfObj.map((changedArr) => ({
+  id: changedArr.id,
+  name: changedArr.name,
+  job: changedArr.occupation,
+  age: Number(changedArr.age) + 1,
+}));
+console.log(changedData);
 
