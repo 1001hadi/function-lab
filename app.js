@@ -80,5 +80,10 @@ const sortByAges = [...arrayOfObj].sort(
 );
 console.log("Sorted by age:", sortByAges);
 
+// // removing entries over 50 years old
+
+const underFifty = arrayOfObj.filter((entries) => Number(entries.age) <= 50);
+console.log(underFifty);
+
 
 
